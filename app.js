@@ -1,6 +1,9 @@
 const express = require('express');
+const process = require('process');
 const express_graphql = require('express-graphql');
 const { buildSchema, getNullableType } = require('graphql');
+
+
 
 //GraphQl scheme
 const schema = buildSchema(`
@@ -76,6 +79,6 @@ app.use('/graphql', express_graphql({
     graphiql: true
 }));
 
-app.listen(4000, () => {
+app.listen(9000, () => {
     console.log(`Server running on port 4000`)
 })
