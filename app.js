@@ -72,7 +72,7 @@ const root = {
 }
 
 //Express server
-const app = express();
+// const app = express();
 app.use('/graphql', express_graphql({
     schema: schema,
     rootValue: root,
